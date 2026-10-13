@@ -1,0 +1,14 @@
+{
+  "name": "dku-geoguesser",
+  "version": "1.0.0",
+  "description": "GeoGuesser game for Duke Kunshan University campus",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "java --enable-native-access=ALL-UNNAMED -cp server/lib/sqlite-jdbc.jar server/Server.java",
+    "client": "npm --prefix client run dev",
+    "install:all": "npm install && npm --prefix client install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
